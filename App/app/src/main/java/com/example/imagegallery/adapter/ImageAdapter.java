@@ -69,17 +69,15 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageAdapter
 
     class ImageAdapterHolder extends RecyclerView.ViewHolder {
 
-        RoundedImageView imageView;
+        ImageView imageView;
 
         public ImageAdapterHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.image);
-            Log.e("FEwafwafa", "wefawef");
-            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
         }
 
         void setImage(ImageModel imageModel) {
-            Glide.with(context).load(imageModel.getImage()).into(imageView);
+            Glide.with(context).load(imageModel.getImage()).fitCenter().into(imageView);
         }
     }
 

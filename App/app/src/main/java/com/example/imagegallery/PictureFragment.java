@@ -41,7 +41,7 @@ public class PictureFragment extends Fragment {
 
         // Load image
         if (url != null) {
-            Glide.with(getContext()).load(url).into(imageView);
+            Glide.with(getContext()).load(url).fitCenter().into(imageView);
         }
 
         // Set back button functionality
