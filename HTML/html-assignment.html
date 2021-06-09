@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Front End HTML</title>
+        <link rel="stylesheet" href="stylecss.css"> 
+    </head>
+    <body>
+        <div class="background"></div>
+
+        <div class="intro">
+            <h1 class="header">Hello World</h1>
+            <h3 class="sub-header">Wow! Check out all the cool CSS and Javascript things I can do!</h3>
+        </div>
+
+        <div id="image1" class="image-circle" onclick="open"></div>
+
+        <div id="image2" class="image-rectangle" onclick="open"></div>
+
+        <div id="image3" class="image-square" onclick="open"></div>
+            
+        <div class="image-triangle-border">
+            <div id="image4" class="image-triangle" onclick="open"></div>
+        </div>
+
+        <div class="overlay">
+            <div class="overlay-inner">
+                <button id="close" class="close" onclick="close">X</button>
+                <div class="overlay-image"></div>
+                <h2 class="overlay-text">Collaboration</h2>
+            </div>
+        </div>
+
+
+
+        <script>
+
+            const overlay = document.querySelector('.overlay');
+            const overlayImage = document.querySelector('.overlay-image');
+    
+            console.log("Hello");
+            console.log(overlayImage);
+    
+            document.getElementById("image1").onclick = open;
+            document.getElementById("image2").onclick = open;
+            document.getElementById("image3").onclick = open;
+            document.getElementById("image4").onclick = open;
+            document.getElementById("close").onclick = close;
+
+            console.log(document.getElementById("image1"));
+    
+            function open(id) {
+                overlay.classList.add('open');
+    
+                var img = document.getElementById(this.id);
+                style = img.currentStyle || window.getComputedStyle(img, false);
+                background_image = style.backgroundImage.slice(4, -1).replace(/['"]/g, "");
+                overlayImage.style.backgroundImage = 'url("'+background_image+'")';
+                overlayImage.style.backgroundSize = "cover";
+            }
+    
+            function close() {
+                overlay.classList.remove('open');
+            }
+    
+        </script>
+        
+    </body>
+</html>

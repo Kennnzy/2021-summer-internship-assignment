@@ -1,0 +1,225 @@
+.header {
+    position: absolute;
+    width: 436px;
+    height: 99px;
+    left: calc(50% - 436px/2 - 0.5px);
+    top: 0px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 98px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.sub-header {
+    position: absolute;
+    height: 33px;
+    left: 0%;
+    right: 0%;
+    top: 123px;
+    bottom: 0px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.intro {
+    position: absolute;
+    width: 693px;
+    height: 156px;
+    left: calc(50% - 639px/2);
+    top: calc(2%);
+}
+
+.background {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: linear-gradient(180deg, #3856BF 0%, #E57E67 100%);
+}
+
+.image-circle {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: calc(50% + 320px/2);
+    top: calc(50% - 320px/2 - 320px/4);
+
+    background: url("./GOA-Interview-Assets/surface-ZlJmOUFRBfQ-unsplash.jpg");
+    background-size: 100%;
+
+    border: 10px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+
+    transition: .3s;
+}
+
+.image-circle:hover {
+    background-size: 90%;
+}
+
+.image-rectangle {
+    position: absolute;
+    width: 320px;
+    height: 240px;
+    left: calc(50% + 320px/2);
+    top: calc(50% - 240px/2 - 240px/4);
+
+    background: url("./GOA-Interview-Assets/sergey-pesterev-llGiAyYthDw-unsplash.jpg");
+    background-size: 115%;
+
+    border: 10px solid #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    object-fit: cover;
+
+    transition: .3s;
+}
+
+.image-rectangle:hover {
+    background-size: 110%;
+}
+
+.image-square {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: calc(50% + 320px/2);
+    bottom: calc(50% - 320px*1.4);
+
+    background: url("./GOA-Interview-Assets/lee-chinyama-6lGiNbAublo-unsplash.jpg");
+    background-size: 120%;
+
+    border: 10px solid #FFFFFF;
+    overflow: hidden;
+    box-sizing: border-box;
+    object-fit: cover;
+
+    transition: .3s;
+}
+
+.image-square:hover {
+    background-size: 110%;
+}
+
+.image-triangle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+
+    background: url("./GOA-Interview-Assets/simone-hutsch-8LwKILB2ceI-unsplash.jpg");
+
+    background-size: 110%;
+    background-position-y: 100%;
+    background-position-x: 70%;
+    overflow: hidden; 
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+    transition: .3s;
+}
+
+.image-triangle:hover {
+    background-size: 90%;
+}
+
+.image-triangle-border {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: calc(50% + 320px/2);
+    bottom: calc(50% - 320px*1.4);
+
+	background: white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.overlay {
+    position:fixed;
+    background: rgba(71, 69, 69, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 3;
+}
+
+.overlay.open {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.overlay-inner {
+    background: white;
+    width: 60%;
+    height: 55%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 2%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.overlay-image {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: calc(50% - 250px/2);
+    top: calc(50% - 50px);
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    width: 124px;
+    height: 98px;
+    left: calc(50% - 124px/2 - 130px);
+    top: 0px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 98px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    outline: 0;
+    color: #474545;
+    border: 0;
+    text-transform: uppercase;
+    height: 20px;
+    width: 20px;
+    letter-spacing: 2px;
+}
+
+.close:hover {
+    color: #a0a0a0;
+}

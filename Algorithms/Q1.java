@@ -8,7 +8,7 @@ public class Q1 {
         // Expected pairs are (to be printed on the console):
         // (2, 4)
         // (1, 5)
-
+        
         findPairs(testArray, targetSum);
         
     }
